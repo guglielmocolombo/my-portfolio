@@ -5,7 +5,7 @@ import ContentInformation from './ContentInformation';
 
 const MainContent = () => {
   const [showAboutContent, setShowAboutContent] = useState(false);
-  const backgroundImage = '/background.jpeg'; // Path to your background image
+  const backgroundImage = 'images/background.jpeg';
 
   return (
     <Container
