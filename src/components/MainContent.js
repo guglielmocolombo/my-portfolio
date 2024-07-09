@@ -5,7 +5,7 @@ import ContentInformation from './ContentInformation';
 
 const MainContent = () => {
   const [showAboutContent, setShowAboutContent] = useState(false);
-  const backgroundImage = 'images/background.jpeg';
+  const backgroundImage = 'images/background1.jpeg';
 
   return (
     <Container

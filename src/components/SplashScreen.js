@@ -6,7 +6,7 @@ const SplashScreen = ({ onEnd }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onEnd();
-    }, 15000); // Duration of your video in milliseconds
+    }, 3200); // Duration of your video in milliseconds
 
     return () => clearTimeout(timer);
   }, [onEnd]);
