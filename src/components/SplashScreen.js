@@ -14,7 +14,7 @@ const SplashScreen = ({ onEnd }) => {
   return (
     <div className="splash-screen">
       <video className="splash-video" autoPlay muted onEnded={onEnd}>
-        <source src="/video.mp4" type="video/mp4" />
+        <source src="/cook1.mp4" type="video/mp4" />
       </video>
     </div>
   );

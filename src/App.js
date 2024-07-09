@@ -5,7 +5,7 @@ import MainContent from './components/MainContent'; // Your main content compone
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
 function App() {
-  const [showSplash, setShowSplash] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
 
   const handleSplashEnd = () => {
     setShowSplash(false);
