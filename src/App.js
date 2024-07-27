@@ -5,7 +5,7 @@ import MainContent from './components/MainContent'; // Your main content compone
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
 function App() {
-  const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(false);
 
   const handleSplashEnd = () => {
     setShowSplash(false);
@@ -17,7 +17,7 @@ function App() {
         <SplashScreen onEnd={handleSplashEnd} />
       ) : (
         <>
-          <MainContent />
+          <RecordTrip />
         </>
       )}
     </div>
