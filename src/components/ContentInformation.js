@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
-import './ContentInformation.css'; // Custom CSS for additional styling
 
 const ContentInformation = ({ inputFile }) => {
   const [fileContent, setFileContent] = useState('');

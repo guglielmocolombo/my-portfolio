@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import './MainContent.css';
 import ContentInformation from './ContentInformation';
 
 const MainContent = () => {
