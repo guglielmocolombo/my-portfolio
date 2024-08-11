@@ -8,11 +8,10 @@ const sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
 
-function applyLetter(grid, word) {
+function applyLetter(grid, word, startRow, startColumn) {
 
-    let startRow = grid.length-10
-    let startColumn = -3
     for(const letter of word){
+        console.log(letter)
         const letterGrid = letterCollections.get(letter)
         startColumn+=letterGrid[0].length
         for(let i=0;i<letterGrid.length;i++){
@@ -38,7 +37,8 @@ function initGrid(rows, columns, parameter){
 
     if(parameter){
         console.log("SUCA");
-        applyLetter(myGrid, "SO")
+        applyLetter(myGrid, "SOFTWARE ENGINEER", myGrid.length-10, -3)
+        applyLetter(myGrid, "GUGLIELMO COLOMBO", myGrid.length-20, -3)
     }
 
     return myGrid
@@ -48,7 +48,7 @@ function initGrid(rows, columns, parameter){
 const FallingSand = () => {
     
     const rows = 30;
-    const columns = 120;
+    const columns = 110;
     const [grid, setGrid] = useState(() => initGrid(rows, columns, true));
     const [start, setStart] = useState(0)
     const [reverse, setReverse] = useState(false)

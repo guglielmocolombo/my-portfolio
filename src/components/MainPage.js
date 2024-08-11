@@ -5,7 +5,7 @@ import FallingSand from './FallingSand';
 
 const MainPage = () => {
     const containerStyle = {
-        width: '1200px',   // Set the width
+        width: '1000px',   // Set the width
         height: '150px',  // Set the height
         color: 'white',   // White text color for contrast
         position: 'absolute',
