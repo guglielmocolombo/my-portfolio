@@ -1,9 +1,11 @@
 Hello! I'm Guglielmo Colombo, a 25-year-old Software Engineer born on August 26, 1998, in Italy.
 My professional journey is driven by a deep interest in software development, cloud technologies,
 and artificial intelligence.
-I thrive on the challenges and innovations within these fields, continually seeking to expand my knowledge and skills.
+I thrive on the challenges and innovations within these fields, continually seeking to expand my knowledge 
+and skills.
 
-Beyond my professional pursuits, I'm passionate about a few other things that bring balance and joy to my life.
+Beyond my professional pursuits, I'm passionate about a few other things that bring balance and joy to my
+ life.
 Cooking allows me to explore my creativity and unwind after a day of coding.
 Cycling keeps me active and connected with nature, while traveling broadens my horizons,
 introducing me to new cultures and experiences.
