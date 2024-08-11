@@ -1,6 +1,5 @@
 import React, { useState, useEffect} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import ContentInformation from './ContentInformation';
 import letterCollections from './letters/letterCollections';
 
 
@@ -11,7 +10,6 @@ const sleep = (ms) => {
 function applyLetter(grid, word, startRow, startColumn) {
 
     for(const letter of word){
-        console.log(letter)
         const letterGrid = letterCollections.get(letter)
         startColumn+=letterGrid[0].length
         for(let i=0;i<letterGrid.length;i++){
@@ -36,7 +34,6 @@ function initGrid(rows, columns, parameter){
     }
 
     if(parameter){
-        console.log("SUCA");
         applyLetter(myGrid, "SOFTWARE ENGINEER", myGrid.length-10, -3)
         applyLetter(myGrid, "GUGLIELMO COLOMBO", myGrid.length-20, -3)
     }
@@ -56,8 +53,8 @@ const FallingSand = () => {
     const tileStyle = {
         width: '8px',
         height: '8px',
-        padding: '0', // Remove padding for smaller tiles
-        margin: '0', // Remove margins between tiles
+        padding: '0',
+        margin: '0',
     };
 
     

@@ -1,49 +1,53 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import ContentInformation from './ContentInformation';
-
+import PortfolioProjects from './PortfolioProjects';
+import Education from './Education';
+import About from './About';
+import ProfessionalExperience from './ProfessionalExperience';
 const MainContent = () => {
-  const [showAboutContent, setShowAboutContent] = useState(false);
-  const backgroundImage = 'images/background1.jpeg';
+  const [showContent, setShowContent] = useState(-1);
+
+  const setContent = (index) => {
+
+    if (showContent === index) {
+      setShowContent(-1)
+    } else {
+      setShowContent(index)
+    }
+
+  }
 
   return (
-    <Container
-      fluid
-      className="main-content"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
-     
-      <div className="content">
-        <h1 className="main-title">Let Me Cook</h1>
-        <h2 className="subtitle">Guglielmo Colombo - Software Engineer</h2>
-        
-        <Row className="grid-row">
-          <Col onClick={() => setShowAboutContent(!showAboutContent)}>
-            <div className="grid-tile">
-              <h3>About</h3>
-            </div>
-            {showAboutContent ? 
-            <ContentInformation inputFile={"about.txt"}/> : <></>}
-          </Col>
-          <Col>
-            <div className="grid-tile">
-              <h3>Education</h3>
-            </div>
-          </Col>
-          <Col>
-            <div className="grid-tile">
-              <h3>Professional Experience</h3>
-            </div>
-          </Col>
-          <Col>
-            <div className="grid-tile">
-              <h3>Projects</h3>
-            </div>
-          </Col>
-        </Row>
-        
-      </div>
-    </Container>
+    <>
+      <Row onClick={() => setContent(0)}>
+        <div className="grid-tile">
+          <h3>About</h3>
+        </div>
+        {showContent === 0 ?
+          <About/> : <></>}
+      </Row>
+      <Row onClick={() => setContent(1)}>
+        <div className="grid-tile">
+          <h3>Professional Experience</h3>
+        </div>
+        {showContent === 1 ?
+          <ProfessionalExperience/> : <></>}
+      </Row>
+      <Row onClick={() => setContent(2)}>
+        <div className="grid-tile">
+          <h3>Projects</h3>
+        </div>
+        {showContent === 2 ?
+          <PortfolioProjects /> : <></>}
+      </Row>
+      <Row onClick={() => setContent(3)}>
+        <div className="grid-tile">
+          <h3>Education</h3>
+        </div>
+        {showContent === 3 ?
+          <Education/> : <></>}
+      </Row>
+    </>
   );
 };
 

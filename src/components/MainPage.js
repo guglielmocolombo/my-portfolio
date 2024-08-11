@@ -1,24 +1,31 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FallingSand from './FallingSand';
+import MainContent from './MainContent';
 
 const MainPage = () => {
+
+    console.log(window.screen.width)
     const containerStyle = {
-        width: '1000px',   // Set the width
+        width: '950px',   // Set the width
         height: '150px',  // Set the height
-        color: 'white',   // White text color for contrast
-        position: 'absolute',
-        top: '50px',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        justifyContent: 'center',
+        margin: '50px auto',  // Center the container horizontally and add margin from top
     };
 
     return (
-        <Container style={containerStyle}>
-            <FallingSand></FallingSand>
-        </Container>
+        <>
+            <Row>
+                <Container style={containerStyle}>
+                    <FallingSand></FallingSand>
+                </Container>
+            </Row>
+            <Row>
+                <Container style={containerStyle}>
+                    <MainContent></MainContent>
+                </Container>
+            </Row>
+        </>
     );
 }
 
